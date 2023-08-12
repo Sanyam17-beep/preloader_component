@@ -10,7 +10,7 @@ function Preloader() {
       document.querySelectorAll(".bar").forEach(function(current) {
         let startWidth = 0;
         const interval = setInterval(frame,100);
-        const inte = setInterval(fr,3500);
+        const inte = setInterval(fr,4000);
         function frame() {
           if (startWidth >= 100) {
             clearInterval(inte);
@@ -27,12 +27,16 @@ function Preloader() {
         } 
       });
     }
+    function fro(){
+        let temp=Math.floor(Math.random()*193);
+        seti(temp);
+      } 
     useEffect(() => {
       setTimeout(loading, 1000);
     }, []);
   return (
     <div className='pre'>
-      <div className="loader">
+      <div className="loader" onClick={fro}>
       <div className="load"><span id='name'>Sanyam</span>
       <div className="progress">
         <div className="bar">
